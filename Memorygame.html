@@ -1,0 +1,28 @@
+<!-- ***** This page is not the first page, Please open memory.html first!! *****-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="Memorygame.css" />
+    <link rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="menu">
+        <label for="playerName">Enter your name:</label>
+        <input type="text" id="playerName" />
+        <br />
+        <label for="cardCount">Choose the number of cards (4-60):</label>
+        <input type="number" id="cardCount" min="4" max="60" />
+        <br />
+        <button onclick="startGame()">Start Game</button>
+      </div>
+
+      <section class="memory-game container">
+        <!-- Cards will be dynamically generated here -->
+      </section>
+    </div>
+    <script src="memorygame.js"></script>
+  </body>
+</html>

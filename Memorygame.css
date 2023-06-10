@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060AB2;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #menu {
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #menu label{
+    font-size: 36px;
+  } 
+  #menu input{
+    font-size: 26px;
+    padding: 15px;
+    width: 120px;
+    height: 35px;
+  }
+  #menu button {
+    margin-bottom: 10px;
+    font-size: 36;
+  }
+  
+  #menu button {
+    background: #ffffff;
+    color: #FF5F6D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #menu button:hover {
+    background: #FF5F6D;
+    color: #ffffff;
+  }
+  
+  .memory-game {
+    width: 1000px;
+    height: 700px;
+    margin-top: 50px;
+    margin-left: -500px;
+    display: grid;
+    gap: 10px;
+    perspective: 1000px;
+    margin-right: 0; /* Reset the default margin-right */
+  }
+  
+
+  
+  .congrats-text {
+    font-size: 48px;
+    color: #ffffff;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px; /* Added margin-bottom */
+  }
+  .play-again-button {
+    background: #ffffff;
+    color: #FF5F6D;
+    border: none;
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 24px; /* Increased font size */
+  }
+  
+  .play-again-button:hover {
+    background: #FF5F6D;
+    color: #ffffff;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    
+    .row-centered {
+        display: flex;
+        justify-content: center;
+        grid-column: 1 / -1;
+    }
+    
+    .row-centered .memory-card {
+        margin-left: 0px;
+        margin-right: 500px;
+    }
+    
+    .memory-card {
+        width:150px;
+        height: 200px;
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .memory-card:active {
+        transform: scale(0.97);
+        transition: transform 0.2s;
+    }
+    
+    .memory-card.flip {
+        transform: rotateY(180deg);
+    }
+    
+    .front-face,
+    .back-face {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+        border-radius: 100px;
+        background: #1c7ccc;
+        backface-visibility: hidden;
+    }
+    
+    .front-face {
+        transform: rotateY(180deg);
+    }
+    
+    .player-name {
+        font-size: 72px;
+        margin-bottom: 10px;
+        font-family: "Arial", sans-serif;
+        color: #FF5F6D;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to right, #FF5F6D, #FFC371);
+        -webkit-background-clip: text; /* Safari, Chrome, and other WebKit browsers */
+        -moz-background-clip: text; /* Firefox */
+        -ms-background-clip: text; /* Internet Explorer */
+        background-clip: text; /* Standard */
+        -webkit-text-fill-color: transparent; /* Safari, Chrome, and other WebKit browsers */
+      } 
+      
+      #timer {
+        font-size: 48px;
+        margin-bottom: 10px;
+        font-family: "Arial", sans-serif;
+        color: #FF5F6D;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to right, #FF5F6D, #FFC371);
+        -webkit-background-clip: text; /* Safari, Chrome, and other WebKit browsers */
+        -moz-background-clip: text; /* Firefox */
+        -ms-background-clip: text; /* Internet Explorer */
+        background-clip: text; /* Standard */
+        -webkit-text-fill-color: transparent; /* Safari, Chrome, and other WebKit browsers */
+      }
+
+      /* Add the following CSS code */
+      @media screen and (max-width: 1200px) {
+        .memory-game {
+          grid-template-columns: repeat(10, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .memory-game {
+          grid-template-columns: repeat(8, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .memory-game {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }

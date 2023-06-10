@@ -1,0 +1,44 @@
+<!-- Internet applications assignment 2
+     Name:Nir Miranda
+     ID:316554500
+     Name:Dorin Cohen
+     ID:211779947
+     This is the welcome page !-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MemoryGame</title>
+    <link href="memory.css" rel="stylesheet" />
+    <link href="normaliz.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" rel="stylesheet" />
+    <link rel="icon" href="img/memory.png" />
+
+    <script src="memory.js" defer></script>
+  </head>
+    <body>
+        <a href="#" onclick="play()">
+
+            <audio id="audio" src="./img/afrike.mp3" loop="loop"></audio>
+        
+            <script>
+              function play() 
+              {
+                var audio = document.getElementById("audio");
+                audio.play();
+              }
+            </script>
+              <h1 class="main-character">MemoryGame</h1>
+            
+            <div id="panda"></div>
+            <div id="street"></div>
+            <div id="monkey"></div>
+            <div class="center">
+                <a href="Memorygame.html" class="start-game-button">Start Game</a>
+             
+
+        </body>
+  </html>

@@ -1,0 +1,81 @@
+
+body
+	{   
+        background: url(https://w0.peakpx.com/wallpaper/780/790/HD-wallpaper-beautyfull-jungle-jungle-3d-cg-lion.jpg); 
+		background-color: orange;
+		background-size: cover;
+		overflow: hidden;
+        height: 100%;
+        width: 100%;
+	}
+    
+   @keyframes fly_cycle{
+    100%{
+        background-position: -3600px 0;
+
+    }
+   }
+#panda
+	{
+		position:relative;
+		top:400px;
+		background: url(https://git.io/JUW4L); 
+		width:250px;
+		height:330px;		
+		animation:walking_animation 1s steps(12) infinite,move_forward 8s linear infinite;	
+	}
+    
+  
+@keyframes walking_animation
+	{
+		0%{background-position:0px;}
+		100%{background-position:3000px;}
+	}
+
+@keyframes move_forward
+	{
+		0%{transform:translateX(-100px);}
+		100%{transform:translateX(1200px);}
+	}
+
+#street
+	{
+		position:relative;
+		top:400px;
+		border-bottom:5px groove green;
+	}
+
+    .main-character {
+        font-size: 80px;
+        font-weight: bold;
+        color: #000000;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items:baseline;
+        height: 100vh;
+        margin-bottom: 0px;
+      }
+      
+      .start-game-button {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #0a0a0a;
+        border-radius: 4px;
+      }
+      
+      .start-game-button:hover {
+        background-color: #0056b3;
+      }
+      
+      .start-game-button:active {
+        background-color: #003080;
+      }
